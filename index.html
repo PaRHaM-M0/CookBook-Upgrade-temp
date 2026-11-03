@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>PaRHaM's CookBook! — آشپزخانه‌ی من</title>
+<meta content="دستورهای آشپزی فارسی، از غذاهای روزمره تا پروژه‌های جدی آشپزی." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="assets/theme.css" rel="stylesheet"/>
+<link href="assets/home.css" rel="stylesheet"/>
+<link href="manifest.json" rel="manifest"/>
+<meta content="#E5EDE1" name="theme-color"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="CookBook" name="apple-mobile-web-app-title"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<link href="icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="icons/favicon-64.png" rel="icon" sizes="64x64" type="image/png"/>
+<link href="images/pizza-960.webp" rel="preload" as="image" imagesrcset="images/pizza-480.webp 480w, images/pizza-960.webp 960w, images/pizza.webp 1280w" imagesizes="(max-width:700px) 100vw, (max-width:1240px) 92vw, 1150px" fetchpriority="high"/>
+</head>
+<body>
+
+<!-- ░░░ نوار بالا: جست‌وجو داخل نوار ░░░ -->
+<nav id="nav">
+<div class="nav-in">
+<a class="logo" href="index.html"><span class="logo-mark">MK</span><span>آشپزخانه‌ی من</span></a>
+<form class="search" role="search" onsubmit="return false">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+<input aria-keyshortcuts="/" aria-label="جست‌وجوی دستور پخت" autocomplete="off" id="search" placeholder="پیتزا، Alfredo، gochujang…" type="search"/>
+<kbd aria-hidden="true" title="کلید /">/</kbd>
+</form>
+<div class="nav-links">
+<a class="always" href="#gallery">دستورها</a>
+<a aria-label="English" class="toggle lang-toggle" href="en/index.html" id="langToggle" title="English"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg></a>
+<button aria-label="تغییر تم" class="toggle" id="themeToggle" title="روشن / تاریک">◐</button>
+</div>
+</div>
+</nav>
+
+<main class="wrap page">
+
+<!-- ░░░ سرصفحه‌ی فشرده ░░░ -->
+<header class="page-head">
+<h1>آشپزخانه‌ی من</h1>
+</header>
+
+<!-- ░░░ موزاییک بالا ░░░ -->
+<section class="bento" aria-label="منتخب و آمار">
+
+<a class="bento-hero" href="recipes/neapolitan-pizza.html" id="heroFeatured">
+<span class="bh-media" id="hfMedia"><img alt="Neapolitan Pizza" decoding="async" fetchpriority="high" src="images/pizza-960.webp" srcset="images/pizza-480.webp 480w, images/pizza-960.webp 960w, images/pizza.webp 1280w" sizes="(max-width:760px) 100vw, (max-width:1240px) 60vw, 720px"/></span>
+<span class="bh-body">
+<span class="bh-tag">دستور منتخب</span>
+<h2 class="en" id="hfTitle">Neapolitan Pizza</h2>
+<span class="bh-meta" id="hfMeta"><span>پیتزا</span><span>حرفه‌ای</span></span>
+<span class="bh-open">رفتن به دستور <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+</span>
+</a>
+
+<div class="bento-stats">
+<div class="stats-head"><span class="label">کتابخانه</span></div>
+<ul class="stats" aria-label="آمار کتابخانه">
+<li><strong data-stat="recipes">—</strong><span>دستور پخت</span></li>
+<li><strong data-stat="featured">—</strong><span>منتخب</span></li>
+<li><strong data-stat="categories">—</strong><span>دسته</span></li>
+</ul>
+</div>
+
+<div class="bento-fast">
+<div class="tile-head"><span class="label">زیر ۳۰ دقیقه</span></div>
+<ol class="fast-list" id="quickFast"><li><span class="fast-empty">در حال بارگذاری…</span></li></ol>
+</div>
+
+</section>
+
+<!-- ░░░ ریل دسته‌بندی ░░░ -->
+<section class="category-browse" id="categories" aria-label="دسته‌بندی‌ها">
+<div class="category-head">
+<h2>دسته‌بندی‌ها</h2>
+<div class="category-actions" aria-label="فیلتر سریع">
+<button class="category-action is-active" id="quickAll" type="button" aria-pressed="true">همه</button>
+<button class="category-action" id="quickFeatured" type="button" aria-pressed="false">منتخب‌ها</button>
+</div>
+</div>
+<div class="category-rail" id="quickCats" aria-label="دسته‌بندی‌های غذا"></div>
+</section>
+
+<!-- ░░░ کتابخانه ░░░ -->
+<section class="library" id="gallery">
+
+<div class="library-head">
+<h2 class="library-title"><span id="resultsTitle">همه‌ی دستورها</span><span aria-live="polite" class="count" id="count"></span></h2>
+<div class="library-tools">
+<button aria-controls="filters" aria-expanded="false" class="btn" id="filtersToggle" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.4"/><circle cx="10" cy="17" r="2.4"/></svg>
+<span id="filtersToggleText">فیلترها</span>
+</button>
+<label class="sort-wrap"><span>مرتب‌سازی</span><select aria-label="مرتب‌سازی نتایج" id="sortSelect">
+<option value="default">پیش‌فرض دسته‌بندی</option>
+<option value="featured">منتخب‌ها اول</option>
+<option value="name">نام A تا Z</option>
+<option value="quickest">سریع‌ترین</option>
+<option value="easiest">آسان‌ترین</option>
+</select></label>
+</div>
+</div>
+
+<aside class="filters-panel" id="filtersPanel">
+<div class="filters-panel-head">
+<strong>فیلترها</strong>
+<div class="filters-panel-actions">
+<button id="clearFilters" type="button">پاک‌کردن همه</button>
+<button aria-label="بستن فیلترها" class="sheet-close" id="sheetClose" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</div>
+</div>
+<div aria-label="فیلترهای دستور پخت" class="filters" id="filters"></div>
+<div class="sheet-foot"><button class="btn btn-primary" id="sheetApply" type="button">نمایش دستورها</button></div>
+</aside>
+
+<div aria-live="polite" class="active-filters" id="activeFilters"></div>
+
+<div aria-label="در حال بارگذاری" class="skeleton-set" id="loading">
+<div class="skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line mid"></div></div></div>
+<div class="skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line mid"></div></div></div>
+<div class="skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line mid"></div></div></div>
+<div class="skeleton"><div class="sk-img"></div><div class="sk-body"><div class="sk-line short"></div><div class="sk-line"></div><div class="sk-line mid"></div></div></div>
+</div>
+
+<div id="grid"></div>
+
+<div class="status" id="empty" role="status" hidden>
+<div class="status-mark"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+<h3>نتیجه‌ای پیدا نشد</h3>
+<p>عبارت دیگری را امتحان کن یا فیلترها را پاک کن.</p>
+</div>
+<div class="status" id="loadError" role="alert" hidden>
+<div class="status-mark"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 8v5"/><path d="M12 16.5v.5"/><circle cx="12" cy="12" r="9"/></svg></div>
+<h3>داده‌های دستورها بارگذاری نشد</h3>
+<p>لطفاً صفحه را دوباره بارگیری کن.</p>
+</div>
+
+</section>
+
+</main>
+
+<footer class="site">
+<div class="wrap">
+<span class="foot-mark">PaRHaM's CookBook</span>
+<span>© <span id="year"></span> آشپزخانه‌ی من · <a href="#gallery">فهرست دستورها</a></span>
+</div>
+</footer>
+
+<!-- ░░░ شیت فیلتر و نوار پایین (موبایل) ░░░ -->
+<div class="filters-backdrop" id="filtersBackdrop"></div>
+<div aria-label="دسترسی سریع" class="mobile-bar" id="mobileBar" role="navigation">
+<button class="mbar-btn" id="mbarSearch" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.9" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><span>جست‌وجو</span></button>
+<button class="mbar-btn" id="mbarCats" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.9" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span>دسته‌ها</span></button>
+<button class="mbar-btn" id="mbarFilters" type="button"><svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.9" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.4"/><circle cx="10" cy="17" r="2.4"/></svg><span>فیلترها</span></button>
+</div>
+
+<script src="assets/recipes.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
